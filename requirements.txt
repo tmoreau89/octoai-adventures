@@ -1,0 +1,14 @@
+langchain==0.0.316
+openai==0.28.1
+llama_index
+pydantic
+python-dotenv
+Requests
+sentence-transformers
+transformers
+# termios
+octoai-sdk
+python-dotenv
+streamlit
+streamlit-image-select
+fireworks-ai

@@ -24,6 +24,8 @@ from langchain.pydantic_v1 import BaseModel, Field, validator
 
 llm_map = {
     # "OctoML-CodeLlama-34B-instruct": "codellama-34b-instruct-fp16",
+    "GPT4-turbo": "gpt-4-1106-preview",
+    "GPT3.5-turbo": "gpt-3.5-turbo-1106",
     "OctoML-CodeLlama-34B-instruct-int4": "codellama-34b-instruct-int4",
     "OctoML-CodeLlama-13B-instruct": "codellama-13b-instruct-fp16",
     "OctoML-CodeLlama-7B-instruct": "codellama-7b-instruct-fp16",
@@ -31,8 +33,6 @@ llm_map = {
     "OctoML-Llama2-13B-chat": "llama-2-13b-chat-fp16",
     # "OctoML-Llama2-70B-chat": "llama-2-70b-chat-fp16",
     # "OctoML-Llama2-70B-chat-int4": "llama-2-70b-chat-int4",
-    "GPT4-turbo": "gpt-4-1106-preview",
-    "GPT3.5-turbo": "gpt-3.5-turbo-1106",
     "Fireworks-lllama-v2-7b-chat": "accounts/fireworks/models/llama-v2-7b-chat",
     "Fireworks-llama-v2-13b-chat": "accounts/fireworks/models/llama-v2-13b-chat",
     "Fireworks-llama-v2-70b-chat": "accounts/fireworks/models/llama-v2-70b-chat",
@@ -331,7 +331,7 @@ elif st.session_state.page == 1:
                 st.session_state['setting'] = st.text_input("Describe the setting of your adventure", value=setting)
                 st.session_state['style_preset'] = 'comic-book'
 
-                st.button("Set your character", on_click=nextpage_3)
+                st.button("Select character class", on_click=nextpage_3)
             else:
                 st.button("Restart adventure", on_click=restart)
     else:
@@ -366,7 +366,7 @@ elif st.session_state.page == 1:
 
         # Override the style preset
         st.session_state['style_preset'] = 'cinematic'
-        st.button("Set your character", on_click=nextpage_3)
+        st.button("Select character class", on_click=nextpage_3)
 
 elif st.session_state.page == 2:
     # Take a photo!
